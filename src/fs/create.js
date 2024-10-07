@@ -8,7 +8,7 @@ const __dirname = join(__filename, '..');
 const create = async () => {
     const filePath = join(__dirname, 'files', 'fresh.txt');
     const fileContent = 'I am fresh and young';
-
+    
     try {
         await fs.access(filePath);
         throw new Error('FS operation failed');
