@@ -1,5 +1,5 @@
 const create = async () => {
-    // Write your code here 
+    console.log('hi');
 };
 
 await create();
