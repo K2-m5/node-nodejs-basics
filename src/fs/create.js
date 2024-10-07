@@ -1,12 +1,11 @@
 import { promises as fs } from 'fs';
 import { join } from 'path';
-import { fileURLToPath } from 'url';
+import { __dirname, ROOT_DIR_NAME } from './helpers.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = join(__filename, '..');
+const FILE_NAME = 'fresh.txt'
 
 const create = async () => {
-    const filePath = join(__dirname, 'files', 'fresh.txt');
+    const filePath = join(__dirname, ROOT_DIR_NAME, FILE_NAME);
     const fileContent = 'I am fresh and young';
     
     try {

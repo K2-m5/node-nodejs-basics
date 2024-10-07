@@ -1,13 +1,12 @@
 import { promises as fs } from 'node:fs';
 import { join } from 'path';
-import { fileURLToPath } from 'url';
+import { __dirname, ROOT_DIR_NAME } from './helpers.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = join(__filename, '..');
+const ROOT_DEST_DIR = 'files_copy'
 
 const copy = async () => {
-    const srcFolder = join(__dirname, 'files');
-    const destFolder = join(__dirname, 'files_copy');
+    const srcFolder = join(__dirname, ROOT_DIR_NAME);
+    const destFolder = join(__dirname, ROOT_DEST_DIR);
 
     try {
         await fs.access(srcFolder);
